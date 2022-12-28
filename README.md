@@ -11,6 +11,8 @@ the setters are used correctly.
 - **CRUD operations**: `create`, `remove`, `update` setters for adding, deleting, and updating items in the state
 - **Error handling**: checks to ensure that items being added or deleted actually exist, and throws errors if they do not
 
+## Table of Contents
+
 <!-- vim-markdown-toc GFM -->
 
 - [Installation](#installation)
