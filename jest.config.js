@@ -1,9 +1,9 @@
-/**
- * @type {import('@jest/types').Config.InitialOptions}
- */
+/* eslint-env node */
+
+/** @type {import('@jest/types').Config.InitialOptions} */
 export default {
   testEnvironment: "jsdom",
-  testMatch: ["**/tests/*.ts"],
+  testMatch: ["**/tests/*.ts(x)?", "**/*.test.ts(x)?"],
   testPathIgnorePatterns: ["/node_modules/", "/dist/"],
 
   setupFilesAfterEnv: ["./jest.setup.js"],
@@ -37,4 +37,4 @@ export default {
           ],
         ]
       : ["default"],
-};
+}
