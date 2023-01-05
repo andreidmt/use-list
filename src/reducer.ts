@@ -1,58 +1,30 @@
-import { WithId } from "./types";
+import {
+  ReadOneActions,
+  readOneEnd,
+  readOneError,
+  readOneStart,
+  READ_ONE_EVENTS,
+} from "./read.reducer"
+import { StateItem, State } from "./reducer.types"
 
-type Action<T extends WithId<T>> =
-  | {
-      type: "CREATE";
-      payload: {
-        data: T;
-      };
+export type ReducerActions<T extends StateItem> = ReadOneActions<T>
+
+export const reducer = <T extends StateItem>(
+  state: State<T>,
+  action: ReducerActions<T>
+): State<T> => {
+  switch (action.type) {
+    case READ_ONE_EVENTS.START: {
+      return readOneStart(state, action.payload)
     }
-  | {
-      type: "REMOVE";
-      payload: {
-        id: string;
-      };
+    case READ_ONE_EVENTS.END: {
+      return readOneEnd(state, action.payload)
     }
-  | {
-      type: "UPDATE";
-      payload: {
-        id: string;
-        data: Partial<Omit<T, "id">>;
-      };
-    };
-
-const reducer = <T extends WithId<T>>(
-  state: T[],
-  { type, payload }: Action<T>
-): T[] => {
-  switch (type) {
-    case "CREATE": {
-      if (state.some((item) => item.id === payload.data.id)) {
-        throw new Error(`Item with id ${payload.data.id} already exists`);
-      }
-
-      return [...state, payload.data];
-    }
-    case "REMOVE": {
-      if (!state.some((item) => item.id === payload.id)) {
-        throw new Error(`Item with id ${payload.id} not found`);
-      }
-
-      return state.filter((item) => item.id !== payload.id);
-    }
-    case "UPDATE": {
-      if (!state.some((item) => item.id === payload.id)) {
-        throw new Error(`Item with id ${payload.id} not found`);
-      }
-
-      return state.map((item) =>
-        item.id === payload.id ? { ...item, ...payload.data } : item
-      );
+    case READ_ONE_EVENTS.ERROR: {
+      return readOneError(state, action.payload)
     }
     default: {
-      return state;
+      return state
     }
   }
-};
-
-export { reducer };
+}
