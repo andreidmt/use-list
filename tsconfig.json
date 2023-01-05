@@ -1,5 +1,5 @@
 {
-  "include": ["src"],
+  "include": ["src", "example", "jest.config.js", "jest.setup.js"],
   "exclude": ["**/node_modules"],
   "compilerOptions": {
     "module": "commonjs",
@@ -8,6 +8,7 @@
     "declaration": false,
     "allowJs": true,
     "checkJs": true,
+    "jsx": "preserve",
 
     "strict": true,
 		"noImplicitReturns": true,
