@@ -4,6 +4,17 @@
   "root": true,
 
   "rules": {
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "**/*.+(test|test-d).+(ts|tsx)",
+          "example/**/*.(cjs|ts|tsx)",
+          "jest.config.js",
+          "jest.setup.js"
+        ]
+      }
+    ]
   },
 
   "settings": {
