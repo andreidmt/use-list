@@ -1,5 +1,5 @@
 import { Dispatch } from "react"
-import { checkIsFunction } from "./core.libs/guard"
+import { checkIsFunction } from "./core.libs/check-is-function/check-is-function"
 import { AnyMorphism, Morphism } from "./core.libs/types"
 import { ReadOneActions, READ_ONE_EVENTS } from "./read.reducer"
 import { StateItem } from "./reducer.types"

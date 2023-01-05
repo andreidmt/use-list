@@ -1,11 +1,13 @@
-import { UnaryPredicate } from "./types"
-import { checkIsFunction, checkIsObject } from "./guard"
+import { checkIsFunction } from "../check-is-function/check-is-function"
+import { checkIsObject } from "../check-is-object/check-is-object"
+import { UnaryPredicate } from "../types"
 
 /**
  * Returns whether the first object contains all the fields of the second
  * object.
  *
  * @name checkObjectsMatch
+ * @tag Object
  *
  * @template {Record<string, unknown>} T
  * @param {Matcher<T>} matcher - The fields to match against.

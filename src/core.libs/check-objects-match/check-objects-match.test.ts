@@ -1,4 +1,4 @@
-import { checkObjectsMatch } from "./object"
+import { checkObjectsMatch } from "./check-objects-match"
 
 describe("checkObjectsMatch", () => {
   test("given [an empty matcher and an empty input object] should [return true]", () => {

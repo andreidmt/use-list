@@ -1,4 +1,4 @@
-import { checkIsSomething } from "./guard"
+import { checkIsSomething } from "./check-is-something"
 
 describe("checkIsSomething", () => {
   test("given [string, number, object, array, symbol and function values] should [return true]", () => {

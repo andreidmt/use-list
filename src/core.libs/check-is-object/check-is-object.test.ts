@@ -1,4 +1,4 @@
-import { checkIsObject } from "./guard"
+import { checkIsObject } from "./check-is-object"
 
 describe("checkIsObject", () => {
   test("given [an object] should [return true]", () => {

@@ -1,4 +1,4 @@
-import { checkIsFunction } from "./guard"
+import { checkIsFunction } from "./check-is-function"
 
 describe("checkIsFunction", () => {
   test("given [a function] should [return true]", () => {

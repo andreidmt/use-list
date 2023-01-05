@@ -1,5 +1,5 @@
 import { expectError, expectType } from "tsd"
-import { checkObjectsMatch } from "./object"
+import { checkObjectsMatch } from "./check-objects-match"
 
 type Todo = {
   id: string
