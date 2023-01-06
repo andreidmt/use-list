@@ -1,8 +1,5 @@
 {
   "include": ["src"],
-  "exclude": ["**/*.test-d.ts"],
-  "extends": "./tsconfig.json",
-  "compilerOptions": {
-    "noEmit": true
-  }
+  "exclude": ["**/node_modules", "**/*.test-d.ts"],
+  "extends": "./tsconfig.json"
 }

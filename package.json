@@ -8,8 +8,8 @@
     "url": "https://github.com/andreidmt"
   },
   "type": "module",
-	"exports": "./dist/index.js",
-	"types": "./dist/index.d.ts",
+  "exports": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "----UTIL": "",
     "setup": "npm ci --also=dev",
@@ -23,13 +23,11 @@
     "typecheck": "tsc --project tsconfig.typecheck.json",
     "----TEST": "",
     "test": "jest",
-    "test.types": "tsd dist",
+    "test.types": "tsd",
     "coverage": "jest --coverage --runInBand --bail",
     "----BUILD": "",
-    "build.js": "swc src --out-dir dist --config module.type=es6",
-    "build.types": "tsc --project tsconfig.build-types.json",
     "prebuild": "rm -rf dist",
-    "build": "npm run build.js",
+    "build": "tsc --project tsconfig.build.json",
     "release": "semantic-release",
     "----DEV": "",
     "start": "nodemon --watch src --ext ts,tsx --exec 'npm run build.js'",
@@ -37,21 +35,17 @@
     "tdd": "jest --watch"
   },
   "dependencies": {
-    "@swc/helpers": "^0.4.14",
     "debug": "^4.3.4",
     "uuid": "^9.0.0"
   },
   "peerDependencies": {
-    "react": "^17 || ^18",
-    "react-dom": "^17 || ^18"
+    "react": "^17 || ^18"
   },
   "devDependencies": {
     "@asd14/eslint-config": "^8.3.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.10",
-    "@swc/cli": "^0.1.59",
-    "@swc/core": "^1.3.24",
-    "@swc/jest": "^0.2.24",
     "@testing-library/react": "^13.4.0",
+    "@tsd/typescript": "^4.9.4",
     "@types/debug": "^4.1.7",
     "@types/jest": "^29.2.5",
     "@types/react": "^18.0.26",
@@ -64,8 +58,8 @@
     "nodemon": "^2.0.20",
     "npm-check-updates": "^16.6.2",
     "prettier": "^2.8.1",
-    "swc-loader": "^0.2.3",
-    "tsd": "^0.25.0",
+    "react-dom": "^18.2.0",
+    "tsd-lite": "^0.6.0",
     "typescript": "^4.9.4",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1",
