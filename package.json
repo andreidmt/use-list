@@ -23,7 +23,7 @@
     "typecheck": "tsc --project tsconfig.typecheck.json",
     "----TEST": "",
     "test": "jest",
-    "test.types": "tsd",
+    "test.types": "find src -name \"*.test-d.ts\" | ./bin/tsd-lite-cli.cjs",
     "coverage": "jest --coverage --runInBand --bail",
     "----BUILD": "",
     "prebuild": "rm -rf dist",
