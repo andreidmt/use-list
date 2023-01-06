@@ -1,7 +1,7 @@
-import { expectType } from "tsd"
+import { expectType } from "tsd-lite"
 import { checkIsSomething } from "./check-is-something"
 
-const input: { id: string } | undefined | null = undefined
+const input = { id: "1" } as { id: string } | undefined | null
 
 if (checkIsSomething(input)) {
   expectType<{ id: string }>(input)

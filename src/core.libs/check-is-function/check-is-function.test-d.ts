@@ -1,13 +1,11 @@
-import { expectType } from "tsd"
+import { expectType } from "tsd-lite"
 
 import { checkIsFunction } from "./check-is-function"
-import { UnknownMorphism } from "../types"
+import { AnyMorphism } from "../types"
 
 // eslint-disable-next-line @typescript-eslint/no-empty-function
 const input: unknown = (): void => {}
 
 if (checkIsFunction(input)) {
-  expectType<UnknownMorphism>(input)
-} else {
-  expectType<unknown>(input)
+  expectType<AnyMorphism>(input)
 }

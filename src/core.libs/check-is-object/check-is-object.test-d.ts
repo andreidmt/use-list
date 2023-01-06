@@ -1,10 +1,10 @@
-import { expectType } from "tsd"
+import { expectType } from "tsd-lite"
 import { checkIsObject } from "./check-is-object"
 
-const input: { id: string } | undefined | null = undefined
+const input = { id: "1" } as Record<string, string> | number
 
 if (checkIsObject(input)) {
-  expectType<{ id: string }>(input)
+  expectType<Record<string, string>>(input)
 } else {
-  expectType<undefined | null>(input)
+  expectType<number>(input)
 }
