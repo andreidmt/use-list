@@ -1,15 +1,7 @@
 # useCrudState
 
-A custom React hook that provides state management functionality similar to the
-built-in `useState` hook, but with the added ability to perform CRUD (create,
-read, update, delete) operations on the state.
-
-It exposes **selectors** for accessing the items in the state and **setters**
-for performing CRUD operations. It also includes error handling to ensure that
-the setters are used correctly.
-
-- **CRUD operations**: `create`, `remove`, `update` setters for adding, deleting, and updating items in the state
-- **Error handling**: checks to ensure that items being added or deleted actually exist, and throws errors if they do not
+A state management custom React hook, similar to `useState`, with the
+ability to perform CRUD (create, read, update, delete) operations. 
 
 ## Table of Contents
 
@@ -19,7 +11,6 @@ the setters are used correctly.
 - [Example](#example)
 
 <!-- vim-markdown-toc -->
-
 
 ## Installation
 
