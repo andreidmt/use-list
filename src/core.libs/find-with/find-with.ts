@@ -13,6 +13,7 @@ import {
  * @template {Record<string, unknown>} T
  * @param {Matcher<T>} matcher - The fields to match against.
  * @param {T[]}        input   - The array of objects to search.
+ *
  * @returns {T | undefined} The first object in the array with matching fields,
  * or `undefined` if no such object is found.
  *

@@ -1,7 +1,7 @@
 {
   "name": "@asd14/use-crud-state",
   "version": "1.0.0",
-  "description": "A state management custom React hook, similar to `useState`, with the ability to perform CRUD (create, read, update, delete) operations.",
+  "description": "A state management custom React hook, similar to `useState`, with a CRUD-like interface.",
   "license": "MIT",
   "author": {
     "name": "Andrei Dumitrescu",

@@ -12,6 +12,7 @@ import {
  * @template {Record<string, unknown>} T
  * @param {Matcher<T>} matcher - The fields to match against.
  * @param {T[]}        input   - The array of objects to search.
+ *
  * @returns {boolean} `true` if the array contains an object with matching
  * fields, `false` otherwise.
  *
